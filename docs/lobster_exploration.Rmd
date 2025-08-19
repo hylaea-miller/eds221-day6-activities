@@ -136,7 +136,7 @@ ex_j <- lobsters %>%
 
 ```{r}
 ex_k <-lobsters %>% 
- mutate(designation = case_when(site = c("IVEE", "NAPL") ~ "MPA", TRUE ~ "not MPA"))
+ mutate(designation = case_when(site %in% c("IVEE", "NAPL") ~ "MPA", TRUE ~ "not MPA"))
                         
 ```
 
